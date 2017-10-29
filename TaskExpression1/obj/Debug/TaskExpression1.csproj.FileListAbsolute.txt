@@ -1,1 +1,6 @@
 E:\Mentoring\TaskExpressions\TaskExpression1\bin\Debug\TaskExpression1.exe.config
+E:\Mentoring\TaskExpressions\TaskExpression1\bin\Debug\TaskExpression1.exe
+E:\Mentoring\TaskExpressions\TaskExpression1\bin\Debug\TaskExpression1.pdb
+E:\Mentoring\TaskExpressions\TaskExpression1\obj\Debug\TaskExpression1.csprojResolveAssemblyReference.cache
+E:\Mentoring\TaskExpressions\TaskExpression1\obj\Debug\TaskExpression1.exe
+E:\Mentoring\TaskExpressions\TaskExpression1\obj\Debug\TaskExpression1.pdb

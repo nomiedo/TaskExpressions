@@ -1,0 +1,6 @@
+E:\Mentoring\TaskExpressions\ExtensionMapper\bin\Debug\ExtensionMapper.exe.config
+E:\Mentoring\TaskExpressions\ExtensionMapper\bin\Debug\ExtensionMapper.exe
+E:\Mentoring\TaskExpressions\ExtensionMapper\bin\Debug\ExtensionMapper.pdb
+E:\Mentoring\TaskExpressions\ExtensionMapper\obj\Debug\ExtensionMapper.exe
+E:\Mentoring\TaskExpressions\ExtensionMapper\obj\Debug\ExtensionMapper.pdb
+E:\Mentoring\TaskExpressions\ExtensionMapper\obj\Debug\ExtensionMapper.csprojResolveAssemblyReference.cache
