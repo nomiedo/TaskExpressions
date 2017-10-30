@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Linq;
 using System.Linq.Expressions;
 
@@ -19,14 +20,16 @@ namespace ExtensionMapper
 
     public class Mapper<TSource, TDestination>
     {
-        Func<TSource, TDestination> mapFunction;
-        internal Mapper(Func<TSource, TDestination> func)
+        readonly Func<TSource, TDestination> _mapFunction;
+
+        public Mapper(Func<TSource, TDestination> func)
         {
-            mapFunction = func;
+            _mapFunction = func;
         }
+
         public TDestination Map(TSource source)
         {
-            return mapFunction(source);
+            return _mapFunction(source);
         }
     }
 
@@ -37,8 +40,10 @@ namespace ExtensionMapper
             var source = Expression.Parameter(typeof(TSource), "source");
             var body = Expression.MemberInit(Expression.New(typeof(TDestination)),
                 source.Type.GetProperties().Select(p => Expression.Bind(typeof(TDestination).GetProperty(p.Name), Expression.Property(source, p))));
-            var expr = Expression.Lambda<Mapper<TSource, TDestination>>(body, source);
-            return expr.Compile();
+            var expr = Expression.Lambda<Func<TSource, TDestination>>(body, source);
+            var func = expr.Compile();
+
+            return new Mapper<TSource, TDestination>(func);
         }
     }
     public class Foo {

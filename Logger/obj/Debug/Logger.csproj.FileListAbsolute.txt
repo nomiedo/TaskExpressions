@@ -1,0 +1,14 @@
+E:\Mentoring\TaskExpressions\TaskExpression1\Logger\bin\Debug\Logger.exe.config
+E:\Mentoring\TaskExpressions\TaskExpression1\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+E:\Mentoring\TaskExpressions\TaskExpression1\Logger\bin\Debug\Logger.exe
+E:\Mentoring\TaskExpressions\TaskExpression1\Logger\bin\Debug\Logger.pdb
+E:\Mentoring\TaskExpressions\TaskExpression1\Logger\obj\Debug\Logger.exe
+E:\Mentoring\TaskExpressions\TaskExpression1\Logger\obj\Debug\Logger.pdb
+D:\TESTPRO\TaskExpressions\TaskExpression1\Logger\bin\Debug\Logger.exe.config
+D:\TESTPRO\TaskExpressions\TaskExpression1\Logger\obj\Debug\Logger.exe
+D:\TESTPRO\TaskExpressions\TaskExpression1\Logger\obj\Debug\Logger.pdb
+D:\TESTPRO\TaskExpressions\TaskExpression1\Logger\bin\Debug\Logger.exe
+D:\TESTPRO\TaskExpressions\TaskExpression1\Logger\bin\Debug\Logger.pdb
+d:\TESTPRO\TaskExpressions\Logger\bin\Debug\Logger.exe.config
+d:\TESTPRO\TaskExpressions\Logger\obj\Debug\Logger.exe
+d:\TESTPRO\TaskExpressions\Logger\obj\Debug\Logger.pdb

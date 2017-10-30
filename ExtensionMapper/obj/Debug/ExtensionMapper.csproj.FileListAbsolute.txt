@@ -4,3 +4,8 @@ E:\Mentoring\TaskExpressions\ExtensionMapper\bin\Debug\ExtensionMapper.pdb
 E:\Mentoring\TaskExpressions\ExtensionMapper\obj\Debug\ExtensionMapper.exe
 E:\Mentoring\TaskExpressions\ExtensionMapper\obj\Debug\ExtensionMapper.pdb
 E:\Mentoring\TaskExpressions\ExtensionMapper\obj\Debug\ExtensionMapper.csprojResolveAssemblyReference.cache
+D:\TESTPRO\TaskExpressions\ExtensionMapper\bin\Debug\ExtensionMapper.exe.config
+D:\TESTPRO\TaskExpressions\ExtensionMapper\obj\Debug\ExtensionMapper.exe
+D:\TESTPRO\TaskExpressions\ExtensionMapper\obj\Debug\ExtensionMapper.pdb
+D:\TESTPRO\TaskExpressions\ExtensionMapper\bin\Debug\ExtensionMapper.exe
+D:\TESTPRO\TaskExpressions\ExtensionMapper\bin\Debug\ExtensionMapper.pdb
