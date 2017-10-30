@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Runtime.Remoting.Messaging;
-
+using System.Reflection;
 
 namespace Logger
 {
@@ -28,28 +28,34 @@ namespace Logger
         public T Execute<T>(Expression<Func<T>> toExecute, out string log)
         {
             log = "To replace";
+            var logVisitor =  new LoggerVisitor();
+            logVisitor.Visit(toExecute);
+            log = logVisitor.log;
+
             return toExecute.Compile().Invoke();
         }
     }
 
-    public class TraceExpressionVisitor : ExpressionVisitor
+    public class LoggerVisitor : ExpressionVisitor
     {
         public int indent = 0;
-
-        public override Expression Visit(Expression node)
+        public string log = string.Empty;
+        protected override Expression VisitMember
+            (MemberExpression member)
         {
-            if (node == null)
-                return base.Visit(node);
-
-            Console.WriteLine("{0}{1} - {2}", new String(' ', indent * 4),
-                node.NodeType, node.GetType());
-
-            indent++;
-            Expression result = base.Visit(node);
-            indent--;
-
-            return result;
+            if (member.Expression is ConstantExpression &&
+                member.Member is FieldInfo)
+            {
+                object container =
+                    ((ConstantExpression)member.Expression).Value;
+                object value = ((FieldInfo)member.Member).GetValue(container);
+                var newMeber = $"{member.Member.Name} = {value}";
+                Console.WriteLine(newMeber);
+                log += Environment.NewLine + newMeber;
+            }
+            return base.VisitMember(member);
         }
+
     }
 }
 

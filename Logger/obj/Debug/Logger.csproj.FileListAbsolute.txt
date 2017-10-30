@@ -9,6 +9,9 @@ D:\TESTPRO\TaskExpressions\TaskExpression1\Logger\obj\Debug\Logger.exe
 D:\TESTPRO\TaskExpressions\TaskExpression1\Logger\obj\Debug\Logger.pdb
 D:\TESTPRO\TaskExpressions\TaskExpression1\Logger\bin\Debug\Logger.exe
 D:\TESTPRO\TaskExpressions\TaskExpression1\Logger\bin\Debug\Logger.pdb
-d:\TESTPRO\TaskExpressions\Logger\bin\Debug\Logger.exe.config
-d:\TESTPRO\TaskExpressions\Logger\obj\Debug\Logger.exe
-d:\TESTPRO\TaskExpressions\Logger\obj\Debug\Logger.pdb
+D:\TESTPRO\TaskExpressions\Logger\bin\Debug\Logger.exe.config
+D:\TESTPRO\TaskExpressions\Logger\bin\Debug\Logger.exe
+D:\TESTPRO\TaskExpressions\Logger\bin\Debug\Logger.pdb
+D:\TESTPRO\TaskExpressions\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+D:\TESTPRO\TaskExpressions\Logger\obj\Debug\Logger.exe
+D:\TESTPRO\TaskExpressions\Logger\obj\Debug\Logger.pdb

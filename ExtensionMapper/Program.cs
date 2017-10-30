@@ -1,10 +1,13 @@
-﻿
-using System;
+﻿using System;
 using System.Linq;
 using System.Linq.Expressions;
 
 namespace ExtensionMapper
 {
+    public class Foo { }
+
+    public class Bar { }
+
     class Program
     {
         static void Main(string[] args)
@@ -12,8 +15,10 @@ namespace ExtensionMapper
             var mapGenerator = new MappingGenerator();
             var mapper = mapGenerator.Generate<Foo, Bar>();
 
-            // var res = mapper.Map(new Foo());
-            var res = mapper.Map(new Foo());
+            var req = new Foo();
+            var res = mapper.Map(req);
+
+            Console.WriteLine($"{req.GetType().Name} -> {res.GetType().Name}");
             Console.Read();
         }
     }
@@ -46,11 +51,4 @@ namespace ExtensionMapper
             return new Mapper<TSource, TDestination>(func);
         }
     }
-    public class Foo {
-
-    }
-    public class Bar {
-
-    }
-
 }

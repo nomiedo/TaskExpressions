@@ -1,9 +1,0 @@
-D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\Sample03.dll.config
-D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\Sample03.dll
-D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\Sample03.pdb
-D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\Newtonsoft.Json.dll
-D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\Newtonsoft.Json.xml
-D:\TESTPRO\TaskExpressions\Sample03\obj\Debug\Sample03.csprojResolveAssemblyReference.cache
-D:\TESTPRO\TaskExpressions\Sample03\obj\Debug\Sample03.dll
-D:\TESTPRO\TaskExpressions\Sample03\obj\Debug\Sample03.pdb
