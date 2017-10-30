@@ -1,0 +1,28 @@
+d:\Mentoring\D2-D3\02. Expressions and IQueryable\Samples\Sample03\bin\Debug\Sample03.dll.config
+d:\Mentoring\D2-D3\02. Expressions and IQueryable\Samples\Sample03\bin\Debug\Sample03.dll
+d:\Mentoring\D2-D3\02. Expressions and IQueryable\Samples\Sample03\bin\Debug\Sample03.pdb
+d:\Mentoring\D2-D3\02. Expressions and IQueryable\Samples\Sample03\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+d:\Mentoring\D2-D3\02. Expressions and IQueryable\Samples\Sample03\bin\Debug\Newtonsoft.Json.dll
+d:\Mentoring\D2-D3\02. Expressions and IQueryable\Samples\Sample03\bin\Debug\System.Net.Http.Extensions.dll
+d:\Mentoring\D2-D3\02. Expressions and IQueryable\Samples\Sample03\bin\Debug\System.Net.Http.Primitives.dll
+d:\Mentoring\D2-D3\02. Expressions and IQueryable\Samples\Sample03\bin\Debug\Newtonsoft.Json.xml
+d:\Mentoring\D2-D3\02. Expressions and IQueryable\Samples\Sample03\bin\Debug\System.Net.Http.Extensions.xml
+d:\Mentoring\D2-D3\02. Expressions and IQueryable\Samples\Sample03\bin\Debug\System.Net.Http.Primitives.xml
+d:\Mentoring\D2-D3\02. Expressions and IQueryable\Samples\Sample03\obj\Debug\Sample03.csproj.App.config
+d:\Mentoring\D2-D3\02. Expressions and IQueryable\Samples\Sample03\obj\Debug\Sample03.csprojResolveAssemblyReference.cache
+d:\Mentoring\D2-D3\02. Expressions and IQueryable\Samples\Sample03\obj\Debug\Sample03.dll
+d:\Mentoring\D2-D3\02. Expressions and IQueryable\Samples\Sample03\obj\Debug\Sample03.pdb
+D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\Sample03.dll.config
+D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\Sample03.dll
+D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\Sample03.pdb
+D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\Newtonsoft.Json.dll
+D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\System.Net.Http.Extensions.dll
+D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\System.Net.Http.Primitives.dll
+D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\Newtonsoft.Json.xml
+D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\System.Net.Http.Extensions.xml
+D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\System.Net.Http.Primitives.xml
+D:\TESTPRO\TaskExpressions\Sample03\obj\Debug\Sample03.csproj.App.config
+D:\TESTPRO\TaskExpressions\Sample03\obj\Debug\Sample03.csprojResolveAssemblyReference.cache
+D:\TESTPRO\TaskExpressions\Sample03\obj\Debug\Sample03.dll
+D:\TESTPRO\TaskExpressions\Sample03\obj\Debug\Sample03.pdb
