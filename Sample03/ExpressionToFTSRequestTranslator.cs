@@ -9,8 +9,9 @@ namespace Sample03
 {
 	public class ExpressionToFTSRequestTranslator : ExpressionVisitor
 	{
-		StringBuilder resultString;
-	    private bool startWith, endsWith, contains;
+	    //workstation:EPRUIZHW024*
+        StringBuilder resultString;  
+        private bool startWith, endsWith, contains;
  
 
         public string Translate(Expression exp)
@@ -54,31 +55,47 @@ namespace Sample03
             return base.VisitMethodCall(node);
 		}
 
-		protected override Expression VisitBinary(BinaryExpression node)
-		{
-			switch (node.NodeType)
-			{
-				case ExpressionType.Equal:
-					if (!(node.Left.NodeType == ExpressionType.MemberAccess))
-						throw new NotSupportedException(string.Format("Left operand should be property or field", node.NodeType));
+//		protected override Expression VisitBinary(BinaryExpression node)
+//		{
+//			switch (node.NodeType)
+//			{
+//				case ExpressionType.Equal:
+//					if (!(node.Left.NodeType == ExpressionType.MemberAccess))
+//						throw new NotSupportedException(string.Format("Left operand should be property or field", node.NodeType));
+//
+//					if (!(node.Right.NodeType == ExpressionType.Constant))
+//						throw new NotSupportedException(string.Format("Right operand should be constant", node.NodeType));
+//
+//					Visit(node.Left);
+//					resultString.Append("(");
+//					Visit(node.Right);
+//					resultString.Append(")");
+//					break;
+//
+//				default:
+//					throw new NotSupportedException(string.Format("Operation {0} is not supported", node.NodeType));
+//			};
+//
+//			return node;
+//		}
 
-					if (!(node.Right.NodeType == ExpressionType.Constant))
-						throw new NotSupportedException(string.Format("Right operand should be constant", node.NodeType));
+	    protected override Expression VisitBinary(BinaryExpression node)
+	    {
+	        if (node.Right.NodeType == ExpressionType.MemberAccess)
+	        {
+	            Visit(node.Right);
+	            Visit(node.Left);
+	        }
+	        else
+	        {
+	            Visit(node.Left);
+	            Visit(node.Right);
+	        }
 
-					Visit(node.Left);
-					resultString.Append("(");
-					Visit(node.Right);
-					resultString.Append(")");
-					break;
+	        return node;
+	    }
 
-				default:
-					throw new NotSupportedException(string.Format("Operation {0} is not supported", node.NodeType));
-			};
-
-			return node;
-		}
-
-		protected override Expression VisitMember(MemberExpression node)
+        protected override Expression VisitMember(MemberExpression node)
 		{
 			resultString.Append(node.Member.Name).Append(":");
 

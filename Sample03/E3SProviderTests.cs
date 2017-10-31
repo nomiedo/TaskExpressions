@@ -34,7 +34,6 @@ namespace Sample03
 			}
 		}
 
-
 		[TestMethod]
 		public void WithProvider()
 		{
@@ -47,6 +46,17 @@ namespace Sample03
         }
 
 	    [TestMethod]
+	    public void WithProviderReverse()
+	    {
+	        var employees = new E3SEntitySet<EmployeeEntity>(ConfigurationManager.AppSettings["user"], ConfigurationManager.AppSettings["password"]);
+
+	        foreach (var emp in employees.Where(e => "EPRUIZHW0249" == e.workstation))
+	        {
+	            Console.WriteLine("{0} {1}", emp.nativename, emp.startworkdate);
+	        }
+	    }
+
+        [TestMethod]
 	    public void WithProviderAndStartsWith()
 	    {
 	        var employees = new E3SEntitySet<EmployeeEntity>(ConfigurationManager.AppSettings["user"], ConfigurationManager.AppSettings["password"]);
