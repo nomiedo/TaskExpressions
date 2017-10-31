@@ -45,5 +45,38 @@ namespace Sample03
 				Console.WriteLine("{0} {1}", emp.nativename, emp.startworkdate);
 			}
         }
-	}
+
+	    [TestMethod]
+	    public void WithProviderAndStartsWith()
+	    {
+	        var employees = new E3SEntitySet<EmployeeEntity>(ConfigurationManager.AppSettings["user"], ConfigurationManager.AppSettings["password"]);
+
+	        foreach (var emp in employees.Where(e => e.workstation.StartsWith("EPRUIZHW024")))
+	        {
+	            Console.WriteLine("{0} {1}", emp.nativename, emp.startworkdate);
+	        }
+	    }
+
+	    [TestMethod]
+	    public void WithProviderAndEndsWith()
+	    {
+	        var employees = new E3SEntitySet<EmployeeEntity>(ConfigurationManager.AppSettings["user"], ConfigurationManager.AppSettings["password"]);
+
+	        foreach (var emp in employees.Where(e => e.workstation.EndsWith("PRUIZHW0249")))
+	        {
+	            Console.WriteLine("{0} {1}", emp.nativename, emp.startworkdate);
+	        }
+	    }
+
+	    [TestMethod]
+	    public void WithProviderAndContains()
+	    {
+	        var employees = new E3SEntitySet<EmployeeEntity>(ConfigurationManager.AppSettings["user"], ConfigurationManager.AppSettings["password"]);
+
+	        foreach (var emp in employees.Where(e => e.workstation.Contains("RUIZHW024")))
+	        {
+	            Console.WriteLine("{0} {1}", emp.nativename, emp.startworkdate);
+	        }
+	    }
+    }
 }

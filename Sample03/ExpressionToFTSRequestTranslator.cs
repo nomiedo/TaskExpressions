@@ -10,8 +10,10 @@ namespace Sample03
 	public class ExpressionToFTSRequestTranslator : ExpressionVisitor
 	{
 		StringBuilder resultString;
+	    private bool startWith, endsWith, contains;
+ 
 
-		public string Translate(Expression exp)
+        public string Translate(Expression exp)
 		{
 			resultString = new StringBuilder();
 			Visit(exp);
@@ -29,7 +31,27 @@ namespace Sample03
 
 				return node;
 			}
-			return base.VisitMethodCall(node);
+
+		    if (node.Method.DeclaringType == typeof(string)
+		        && node.Method.Name == "StartsWith")
+		    {
+		        startWith = true;
+            }
+
+		    if (node.Method.DeclaringType == typeof(string)
+		        && node.Method.Name == "EndsWith")
+		    {
+		        endsWith = true;
+		    }
+
+		    if (node.Method.DeclaringType == typeof(string)
+		        && node.Method.Name == "Contains")
+		    {
+		        startWith = true;
+                endsWith = true;
+		    }
+
+            return base.VisitMethodCall(node);
 		}
 
 		protected override Expression VisitBinary(BinaryExpression node)
@@ -65,9 +87,11 @@ namespace Sample03
 
 		protected override Expression VisitConstant(ConstantExpression node)
 		{
-			resultString.Append(node.Value);
+		    if (endsWith) resultString.Append("*");
+            resultString.Append(node.Value);
+            if (startWith) resultString.Append("*");
 
-			return node;
+            return node;
 		}
 	}
 }

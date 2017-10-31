@@ -4,9 +4,16 @@ using System.Linq.Expressions;
 
 namespace ExtensionMapper
 {
-    public class Foo { }
+    public class Foo
+    {
+        public string Name { get; set; }
+    }
 
-    public class Bar { }
+    public class Bar
+    {
+        public string Name { get; set; } 
+        
+    }
 
     class Program
     {
@@ -15,7 +22,10 @@ namespace ExtensionMapper
             var mapGenerator = new MappingGenerator();
             var mapper = mapGenerator.Generate<Foo, Bar>();
 
-            var req = new Foo();
+            var req = new Foo()
+            {
+                Name = "John"
+            };
             var res = mapper.Map(req);
 
             Console.WriteLine($"{req.GetType().Name} -> {res.GetType().Name}");
