@@ -9,3 +9,4 @@ D:\TESTPRO\TaskExpressions\ExtensionMapper\bin\Debug\ExtensionMapper.exe
 D:\TESTPRO\TaskExpressions\ExtensionMapper\bin\Debug\ExtensionMapper.pdb
 D:\TESTPRO\TaskExpressions\ExtensionMapper\obj\Debug\ExtensionMapper.exe
 D:\TESTPRO\TaskExpressions\ExtensionMapper\obj\Debug\ExtensionMapper.pdb
+D:\TESTPRO\TaskExpressions\ExtensionMapper\obj\Debug\ExtensionMapper.csprojResolveAssemblyReference.cache

@@ -14,7 +14,7 @@ namespace Sample03.E3SClient
 	{
 		private string UserName;
 		private string Password;
-		private Uri BaseAddress = new Uri("https://e3s.epam.com/eco/rest/e3s-eco-scripting-impl/0.1.0");
+		private Uri BaseAddress = new Uri("https://telescope.epam.com/eco/rest/e3s-eco-scripting-impl/0.1.0"); 
 
 
 		public E3SQueryClient(string user, string password)
