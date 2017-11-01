@@ -25,4 +25,3 @@ D:\TESTPRO\TaskExpressions\Sample03\bin\Debug\System.Net.Http.Primitives.xml
 D:\TESTPRO\TaskExpressions\Sample03\obj\Debug\Sample03.csproj.App.config
 D:\TESTPRO\TaskExpressions\Sample03\obj\Debug\Sample03.dll
 D:\TESTPRO\TaskExpressions\Sample03\obj\Debug\Sample03.pdb
-D:\TESTPRO\TaskExpressions\Sample03\obj\Debug\Sample03.csprojResolveAssemblyReference.cache

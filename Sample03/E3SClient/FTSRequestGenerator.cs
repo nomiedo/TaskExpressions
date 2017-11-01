@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sample03.E3SClient
 {
@@ -21,28 +19,40 @@ namespace Sample03.E3SClient
 			BaseAddress = baseAddress;
 		}
 
-		public Uri GenerateRequestUrl<T>(string query = "*", int start = 0, int limit = 10)
+		public Uri GenerateRequestUrl<T>(string[] queries, int start = 0, int limit = 10)
 		{
-			return GenerateRequestUrl(typeof(T), query, start, limit);
+			return GenerateRequestUrl(typeof(T), queries, start, limit);
 		}
 
-		public Uri GenerateRequestUrl(Type type, string query = "*", int start = 0, int limit = 10)
+		public Uri GenerateRequestUrl(Type type, string[] queries, int start = 0, int limit = 10)
 		{
 			string metaTypeName = GetMetaTypeName(type);
 
 			var ftsQueryRequest = new FTSQueryRequest
 			{
-				Statements = new List<Statement>
-				{
-					new Statement {
-						Query = query
-					}
-				},
+				Statements = new List<Statement>(),			
 				Start = start,
 				Limit = limit
 			};
 
-			var ftsQueryRequestString = JsonConvert.SerializeObject(ftsQueryRequest);
+		    if (queries.Any())
+		    {
+		        foreach (var query in queries)
+		        {
+		            var statment = new Statement()
+		            {
+		                Query = query
+		            };
+		            ftsQueryRequest.Statements.Add(statment);
+
+		        }
+		    }
+		    else
+		    {
+		        ftsQueryRequest.Statements.Add(new Statement{Query = "*"});
+            }
+
+		    var ftsQueryRequestString = JsonConvert.SerializeObject(ftsQueryRequest);
 
 			var uri = FTSSearchTemplate.BindByName(BaseAddress,
 				new Dictionary<string, string>()

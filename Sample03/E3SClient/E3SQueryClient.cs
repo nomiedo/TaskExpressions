@@ -6,7 +6,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Sample03.E3SClient
 {	
@@ -23,12 +22,12 @@ namespace Sample03.E3SClient
 			Password = password;
 		}
 
-		public IEnumerable<T> SearchFTS<T>(string query, int start = 0, int limit = 0) where T : E3SEntity
+		public IEnumerable<T> SearchFTS<T>(string[] queries, int start = 0, int limit = 0) where T : E3SEntity
 		{
 			HttpClient client = CreateClient();
 			var requestGenerator = new FTSRequestGenerator(BaseAddress);
 
-			Uri request = requestGenerator.GenerateRequestUrl<T>(query, start, limit);
+			Uri request = requestGenerator.GenerateRequestUrl<T>(queries, start, limit);
 
 			var resultString = client.GetStringAsync(request).Result;
 
@@ -36,12 +35,12 @@ namespace Sample03.E3SClient
 		}
 
 
-		public IEnumerable SearchFTS(Type type, string query, int start = 0, int limit = 0)
+		public IEnumerable SearchFTS(Type type, string[] queries, int start = 0, int limit = 0)
 		{
 			HttpClient client = CreateClient();
 			var requestGenerator = new FTSRequestGenerator(BaseAddress);
 
-			Uri request = requestGenerator.GenerateRequestUrl(type, query, start, limit);
+			Uri request = requestGenerator.GenerateRequestUrl(type, queries, start, limit);
 
 			var resultString = client.GetStringAsync(request).Result;
 			var endType = typeof(FTSResponse<>).MakeGenericType(type);

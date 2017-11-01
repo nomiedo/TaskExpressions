@@ -14,12 +14,14 @@ namespace Sample03
         private bool startWith, endsWith, contains;
  
 
-        public string Translate(Expression exp)
+        public string[] Translate(Expression exp)
 		{
 			resultString = new StringBuilder();
 			Visit(exp);
+		    string[] result = resultString.ToString().Split(';');
 
-			return resultString.ToString();
+
+            return result;
 		}
 
 		protected override Expression VisitMethodCall(MethodCallExpression node)
@@ -79,18 +81,21 @@ namespace Sample03
 //			return node;
 //		}
 
+
 	    protected override Expression VisitBinary(BinaryExpression node)
 	    {
-	        if (node.Right.NodeType == ExpressionType.MemberAccess)
+
+	        this.Visit(node.Right.NodeType == ExpressionType.Constant ? node.Left : node.Right);
+
+	        switch (node.NodeType)
 	        {
-	            Visit(node.Right);
-	            Visit(node.Left);
+	            case ExpressionType.And:
+	            case ExpressionType.AndAlso:
+                    resultString.Append(";");
+	                break;
 	        }
-	        else
-	        {
-	            Visit(node.Left);
-	            Visit(node.Right);
-	        }
+
+	        this.Visit(node.Right.NodeType == ExpressionType.Constant ? node.Right : node.Left);
 
 	        return node;
 	    }
@@ -110,5 +115,5 @@ namespace Sample03
 
             return node;
 		}
-	}
+    }
 }

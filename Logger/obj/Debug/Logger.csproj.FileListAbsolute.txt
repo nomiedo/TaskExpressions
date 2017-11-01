@@ -14,3 +14,4 @@ D:\TESTPRO\TaskExpressions\Logger\bin\Debug\Logger.exe
 D:\TESTPRO\TaskExpressions\Logger\bin\Debug\Logger.pdb
 D:\TESTPRO\TaskExpressions\Logger\obj\Debug\Logger.exe
 D:\TESTPRO\TaskExpressions\Logger\obj\Debug\Logger.pdb
+D:\TESTPRO\TaskExpressions\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
